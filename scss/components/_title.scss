@@ -1,0 +1,57 @@
+/***
+ * Title
+ */ 
+
+.title {
+	display: inline-block;
+	font-size: 24px;
+	margin-bottom: 40px;
+	position: relative;
+
+	&.small-margin { margin-bottom: 38px; }
+
+	@media(min-width: $screen-sm) {
+		margin-bottom: 60px;
+	}
+
+	&:before,
+	&:after {
+		bottom: -16px;
+		content: "";
+		left: 0;
+		height: 1px;
+		position: absolute;
+	}
+
+	&:before {
+		background-color: #e5e5e5;
+		width: 100%;
+	}
+
+	&:after {
+		background-color: $primary;
+		width: 73px;
+		z-index: 1;
+	}
+
+	.text-center & {
+		&:before {
+			display: none;
+		}
+		&:after {
+			left: calc(50% - 37px);
+		}		
+	}
+	//used on 404 page
+	&.fs30 {
+		font-size: 30px;
+		margin-bottom: 68px;
+		&:after {
+			bottom: -27px;
+		}
+	}	
+
+	.tab-content .comments-list + & {
+		margin-top: 40px;
+	}
+}

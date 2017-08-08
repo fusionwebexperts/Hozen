@@ -1,0 +1,57 @@
+/***
+ * Progress Bars
+ */
+
+.progress {
+	background-color: #EAEAEA;
+	color: #fff;
+	font-size: 11px;
+	overflow: hidden;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+
+	+ .progress {
+		margin-top: 25px;
+	}
+}
+
+.progress-bar {
+	background-color: #d0d0d0;
+	color: #9d9d9d;
+	float: left;
+	width: 0%;
+	height: 100%;
+	padding: 5px 13px;
+	white-space: nowrap;
+}
+
+$stripped-color: rgba(255, 255, 255, .15);
+
+@keyframes progress-bar-stripes {
+  from  { background-position: 50px 0; }
+  to    { background-position: 0 0; }
+}
+
+.progress-bar-striped {
+	background-image: linear-gradient(45deg, $stripped-color 25%, transparent 25%, transparent 50%, $stripped-color 50%, $stripped-color 75%, transparent 75%, transparent);
+	background-size: 50px 50px;
+
+	&.active {
+		animation: progress-bar-stripes 2s linear infinite;
+	}
+}
+
+/** Variations */
+
+.progress-bar-success,
+.progress-bar-warning,
+.progress-bar-danger,
+.progress-bar-info {
+	color: #fff;
+	text-shadow: 1px 1px rgba(0, 0, 0, .3);
+}
+
+.progress-bar-success { background-color: #5cb85c; }
+.progress-bar-warning { background-color: #f0ad4e; }
+.progress-bar-danger  { background-color: #d54900; }
+.progress-bar-info    { background-color: #5bc0de; }

@@ -1,0 +1,8 @@
+@mixin shadow() {
+	border: 1px solid $border-color;
+	box-shadow: 0 0 1px 0 rgba(0, 0, 0, .14);	
+}
+
+@mixin transition() {
+	transition: background-color .2s, color .2s;
+}

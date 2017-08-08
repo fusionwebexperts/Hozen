@@ -1,0 +1,179 @@
+/***
+ * Contact Info
+ */
+
+.contact-info {
+	list-style: none;
+	padding: 0;
+	line-height: 1.42857em;
+	font-family: $font-family-2;
+	font-size: 12px;
+
+	li {
+		border-radius: 3px;
+		padding: 7px 12px 7px 44px;
+		position: relative;
+
+		&:before {
+			border-right: 1px solid;
+			content: "";
+			left: 0;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			width: 31px;
+		}
+	}
+
+	i {
+		left: 0;
+		position: absolute;
+		text-align: center;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 31px;
+	}
+}
+
+/** Sidebar Version */
+
+.sidebar .contact-info {
+	li {
+		background-color: #f7f7f7;
+		margin-top: 5px;
+
+		&:before {
+			border-right-color: #e1e2e2;
+			opacity: .45; 
+		}
+	}
+}
+
+/** Footer Version */
+
+.site-footer .contact-info {
+	li {
+		border: 1px solid #343434;
+		margin-top: 6px;
+
+		&:before {
+			border-right-color: #343434;
+			content: "";
+			left: 0;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			width: 31px;
+		}
+	}
+}
+
+/** Transparent version */
+
+.contact-info.transparent li {
+	border: 1px solid $border-transparent;
+
+	&:before {
+		border-right-color: $border-transparent;
+	}
+
+	i {
+		color: #fff;
+	}
+}
+
+/** Classic header version */
+
+header.classic .contact-info.transparent li {
+	border: 1px solid #d9d9d9;
+
+	&:before {
+		border-right-color: #d9d9d9;
+	}
+
+	i {
+		color: #8c8c8c;
+	}
+}
+
+/** Top-bar version */
+
+.top-bar .contact-info {
+	margin: 7px 0 7px 0;
+
+	li {
+		border: 1px solid #d9d9d9;
+		display: inline-block;
+		vertical-align: middle;
+
+		&:before {
+			border-right-color: #d9d9d9;
+		}
+	}
+
+	a {
+		color: #8c8c8c;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+.top-bar .contact-info.transparent li {
+	border: none;
+	display: inline-block;
+	padding: 5px 12px 5px 34px;
+
+	&:before {
+		border-right-color: transparent;
+	}
+
+	i {
+		color: #8c8c8c;
+	}
+}	
+
+header.classic .contact-info li {
+	padding: 5px 12px 5px 44px;
+}
+
+/** Above nav bar version */ 
+header.site-header.classic nav.site-navigation .above-nav-bar .contact-info li a:hover {
+	color: $primary;
+}
+
+/** Style-4 version */
+.contact-info.style-4 {
+	i {
+		border:1px solid $border-color;
+		height: 40px;
+		width: 43px;
+		line-height: 40px;
+		border-radius: 4px;
+		font-size: 18px;
+	}
+
+	li {
+		padding-left: 55px;
+		text-align: left;
+
+		&:before {
+			display: none;
+		}
+	}
+}
+
+header.site-header .contact-info.style-4 li {
+	padding-left: 55px;
+}
+
+@media(max-width: $screen-lg) {
+	.contact-info.style-4 {
+		margin-left: 0px;
+		i {
+			border: 1px solid rgba(255, 255, 255, 0.2);
+		}
+	}
+}
+

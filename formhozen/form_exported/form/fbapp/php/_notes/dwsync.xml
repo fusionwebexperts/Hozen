@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="checkoutcontroller.cls.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+<file name="class.smtp.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+<file name="config.cls.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+<file name="config.inc.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+<file name="dashboarddata.cls.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+<file name="dataaccessmysql.cls.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+<file name="dataaccesssqlite.cls.php" server="192.185.27.241/public_html/" local="130724523580000000" remote="131047597800000000" Dst="0" />
+<file name="datareporter.cls.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+<file name="datasave.cls.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+<file name="datasavecsv.cls.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+<file name="datasavemailer.cls.php" server="192.185.27.241/public_html/" local="130686557000000000" remote="131047597800000000" Dst="0" />
+<file name="datasavemysql.cls.php" server="192.185.27.241/public_html/" local="130686557000000000" remote="131047597800000000" Dst="0" />
+<file name="datasavesqlite.cls.php" server="192.185.27.241/public_html/" local="130686557000000000" remote="131047597800000000" Dst="0" />
+<file name="datasqlite.cls.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+<file name="dataupdater.cls.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+<file name="formcontroller.cls.php" server="192.185.27.241/public_html/" local="130686746380000000" remote="131047597800000000" Dst="0" />
+<file name="mailer.cls.php" server="192.185.27.241/public_html/" local="130722107580000000" remote="131047597800000000" Dst="0" />
+<file name="formpage.cls.php" server="192.185.27.241/public_html/" local="130686746380000000" remote="131047597800000000" Dst="0" />
+<file name="mailchimp.cls.php" server="192.185.27.241/public_html/" local="130686557020000000" remote="131047597800000000" Dst="0" />
+<file name="messagepostmerger.cls.php" server="192.185.27.241/public_html/" local="130722107580000000" remote="131047597800000000" Dst="0" />
+<file name="pageextension.cls.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+<file name="servertest.php" server="192.185.27.241/public_html/" local="130729616740000000" remote="131047597800000000" Dst="0" />
+<file name="phpmailer.cls.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+<file name="statsreporter.cls.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+<file name="transactionlogger.cls.php" server="192.185.27.241/public_html/" local="130651954600000000" remote="131047597800000000" Dst="0" />
+</dwsync>

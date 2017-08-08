@@ -1,0 +1,69 @@
+/***
+ * Icon
+ */
+
+.icon {
+	+ .icon {
+		margin-top: 45px;
+	}
+}
+
+/** Icon Title */
+
+.icon-title {
+	font-size: $font-size-heading;
+	margin: 10px 0;
+	font-size: $font-size-heading;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+/** Icon Header */
+
+.icon-header {
+	position: relative;
+} 
+
+.icon-desc {
+	color: #727272;
+	margin-top: 20px;
+}
+
+.icon-media {
+	color: $primary;
+	font-size: 30px;
+}
+
+/** Icon Types */
+
+/* Icon Right and Icon Left Media */
+
+.icon:not(.icon-center) {
+	.icon-media {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+/* Icon Left and default Icon */
+
+.icon-left, .icon:not(.icon-right):not(.icon-center) {
+	.icon-title { padding-left: 43px; }
+	.icon-media { left: 0; }
+}
+
+/* Icon Right */
+
+.icon-right {
+	text-align: right;
+
+	.icon-title { padding-right: 43px; }
+	.icon-media { right: 0; }
+}
+
+/* Icon center */
+
+.icon-center {
+	text-align: center;
+}

@@ -1,0 +1,174 @@
+/***
+ * Social
+ */
+
+.social {
+	display: inline-block;
+	line-height: 0;
+	list-style: none;
+	margin: -5px 0;
+	padding: 0;
+
+	@include clearfix;
+
+	li {
+		float: left;
+		margin: 5px 0;
+
+		+ li {
+			margin-left: 5px;
+		}
+
+		/* Footer specific */
+		.site-footer & {
+			margin-bottom: -4px;
+			margin-top: 8px;
+		}
+	}
+
+	a {
+		@include transition;
+		background-color: $primary;
+		border-radius: 4px;
+		color: #fff;
+		display: block;
+		height: 32px;
+		position: relative;
+		width: 32px;
+
+		&:hover,
+		&:focus {
+			background-color: $hover;
+			color: #fff;
+		}
+	}
+
+	i {
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+}
+
+/** Social minimal */
+/* Content version */
+.site-main .social.social-minimal {
+	a {
+		background: none;
+		color: $heading-color;
+		font-size: 19px;
+		height: auto;
+		width: auto;
+
+		@media(min-width: $screen-md) {
+			font-size: 15px;
+		}
+
+		&:hover,
+		&:focus {
+			color: $text-color;
+		}
+
+		.fa {
+			position: static;
+		}
+	}
+
+	li + li {
+		margin-left: 17px;
+	}
+}
+
+/* Top bar version */
+.top-bar .social.social-minimal {
+	margin-left: -10px;
+	margin-right: -10px;
+
+	a {
+		background: none;
+		color: $text-color;
+
+		&:hover,
+		&:focus {
+			background: none;
+			color: $primary;
+		}
+	}
+}
+
+/** Social border */
+
+.social.social-border  {
+	border: 1px solid $border-color;
+	border-radius: 4px;
+	padding: 0 10px;
+
+	li {
+		margin: 0;
+	}
+
+	a {
+		background: none;
+		color: $text-color;
+		height: 40px;
+		width: 35px;
+
+		&:hover,
+		&:focus {
+			background: none;
+			color: $primary;
+		}
+	}
+
+	i {
+		font-size: 18px;
+	}
+
+	/* In header */
+	.site-header.transparent &,
+	.ghost-nav-wrap & {
+		border-color: rgba(255, 255, 255, .2);
+	}
+
+	.ghost-nav-wrap & {
+		text-align: center;
+		
+		li {
+			display: inline-block;
+			float: none;
+		}
+	}
+}
+
+/** Transparent border */
+
+.social.social-transparent-border {
+	a {
+		background: none;
+		border: 1px solid $border-color;
+		color: $text-color;
+
+		&:hover,
+		&:focus {
+			background: none;
+			color: $primary;
+		}
+
+		.site-header.transparent & {
+			color: #fff;
+
+			&:hover,
+			&:focus {
+				background: none;
+				color: $primary;
+			}
+		}
+
+		/* In header */
+		.site-header.transparent &,
+		.ghost-nav-wrap & {
+			border-color: rgba(255, 255, 255, .2);
+		}
+	}
+}

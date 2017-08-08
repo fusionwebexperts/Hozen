@@ -1,0 +1,70 @@
+.form-group {
+	input:not([type="submit"]), textarea {
+		color: inherit;
+		width: 100%;
+		border: 1px solid rgba( 0, 0, 0, 0.1);
+		border-radius: 3px;
+		padding: 15px 20px;
+		z-index: 1;
+		position: relative;
+
+		&:focus {
+			border-color: $primary;
+			outline-color: $primary;
+		}
+
+		&.alert {
+			border-color: #e31919;
+			background: transparent;
+		}
+
+	}
+
+	textarea {
+		height: 212px;
+		margin-bottom: 15px;
+		max-width: 100%;
+
+		&[rows="1"] { height: 51px;  }
+		&[rows="2"] { height: 117px; }
+		&[rows="3"] { height: 183px; }
+		&[rows="4"] { height: 249px; }
+		&[rows="5"] { height: 315px; }
+	}
+}
+
+.contact-form {
+	.form-group {
+		position: relative;
+
+		label {
+			z-index: 0;
+			position: absolute;
+			top: 17px;
+			right: 50px;
+			display: block;
+			color: #e31919;
+			font-size: 14px;
+			font-family: $font-family-1;
+		}
+		.alert {
+			margin-bottom: 0;
+			line-height: 20px;
+		}
+	}
+	.spinner i  {
+		font-size: 42px;
+	}
+}
+
+form {
+	[class*="col-"] + [class*="col-"] { margin-top: 0; }
+}
+
+input {
+	outline-color: $primary;
+}
+
+.contact-form .form-group textarea.alert {
+    margin-bottom: 15px;
+}

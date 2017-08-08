@@ -1,0 +1,99 @@
+/***
+ * Team
+ */
+
+$member-margin: 51px;
+$member-padding: 28px;
+
+.team {
+	@include clearfix;
+	margin: 0 -15px;
+	margin-top: -$member-margin/2 !important;
+
+	@media(min-width: $screen-md) { 
+		margin-top: -$member-margin !important;
+	}
+}
+
+.member {
+	float: left;
+	margin-top: $member-margin/2;
+	margin-top: $member-margin/2 !important;
+	padding: 0 15px;
+	padding-bottom: $member-padding/2;
+	width: 50%;
+	width: 100%;
+
+	&.member-full {
+		width: 100% !important;
+	}
+
+	@media(min-width: 500px) { width: 50%; }
+
+	@media(min-width: $screen-md) { 
+		margin-top: $member-margin !important;
+		width: 33.33333%;
+
+		.team-col-2 & { width: 50%; }
+		.team-col-3 & { width: 33.33333%; }
+		.team-col-4 & { width: 25%; }
+		.team-col-5 & { width: 20%; }
+		.team-col-6 & { width: 16.66666%; }
+	}
+	p.member-desc {
+		padding-bottom: 15px;
+	}
+}
+
+.member-wrap {
+	@include shadow;
+}
+
+.member-wrap,
+.member-title {
+	padding-left: $member-padding;
+	padding-right: $member-padding;
+}
+
+.member .social {
+	padding-left: 10px;
+}
+
+.member-image,
+.member-title {
+	margin: 0 (-$member-padding);
+}
+
+.member-image {
+	margin-bottom: 21px;
+
+	> a {
+		transition: .4s opacity;
+
+		&:hover,
+		&:focus {
+			opacity: .8;
+		}
+	}
+
+	img { width: 100%; }
+}
+
+.member-name {
+	font-size: 16px;
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.member-title {
+	border: 1px solid $border-color;
+	border-style: solid none;
+	display: block;
+	margin-bottom: 19px;
+	overflow: hidden;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	font-size: 11px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

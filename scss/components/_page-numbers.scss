@@ -1,0 +1,43 @@
+/***
+ * Page Numbers
+ */
+
+ul.page-numbers {
+	list-style: none;
+	margin-top: 45px;
+	padding: 0;
+
+	> li {
+		display: inline-block;
+		text-align: center;
+		overflow: hidden;
+
+		+ li { margin-left: 4px; }
+
+		> * {
+			background-color: #dedede;
+			border-radius: 3px;
+			color: #afafaf;
+			display: block;
+			padding: 6px;
+			width: 32px;
+
+			&.prev,
+			&.next {
+				padding-left: 14px;
+				padding-right: 14px;
+				width: auto;
+			}
+		}
+
+		.prev .fa { margin-right: 5px; }
+		.next .fa { margin-left: 5px; }
+
+		> *:hover,
+		> *:focus,
+		> *.current {
+			background-color: $primary;
+			color: #fff;
+		}
+	}
+}

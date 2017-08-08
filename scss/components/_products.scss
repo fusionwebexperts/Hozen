@@ -1,0 +1,277 @@
+/***
+ * Products
+ */
+
+.products {
+	list-style: none;
+	padding: 0;
+	position: relative;
+
+	&:not('.related'):before {
+		background-color: $border-color;
+		bottom: 0;
+		content: "";
+		display: block;
+		height: 1px;
+		left: 15px;
+		position: absolute;
+		right: 15px;
+	}
+
+	@media(min-width: $screen-xs) {
+		.col-xs-6:nth-of-type(2n + 1) { clear: left; }
+	}
+
+	@media(min-width: $screen-sm) {
+		.col-sm-4:nth-of-type(n) { clear: none; }
+		.col-sm-4:nth-of-type(3n + 1) { clear: left; }
+	}
+
+	@media(min-width: $screen-md) {
+		.col-md-3:nth-of-type(n) { clear: none; }
+		.col-md-3:nth-of-type(4n + 1) { clear: left; }
+	}
+}
+
+.product {
+	margin-bottom: 30px;
+	margin-top: 0 !important;
+
+	.price {
+		float: left;
+	}
+
+	@media(max-width: 400px) {
+		width: 100%;
+	}
+
+	@media(min-width: $screen-md) {
+		margin-bottom: 50px;
+	}
+}
+
+.product-header {
+	@include shadow;
+	position: relative;
+
+	&:hover,
+	&:focus {
+		.add-to-cart-wrapper { opacity: 1; }
+	}
+}
+
+.product-title {
+	font-size: 17px;
+	margin-top: 13px;
+	text-transform: uppercase;
+}
+
+.onsale {
+	background-color: $primary;
+	border-radius: 4px;
+	color: #fff;
+	font-family: $font-family-2;
+	font-size: 11px;
+	height: 42px;
+	padding: 10px 0;
+	position: absolute;
+	right: -4px;
+	text-align: center;
+	text-transform: uppercase;
+	top: -4px;
+	z-index: 1;
+	width: 42px;
+}
+
+.add-to-cart-wrapper {
+	background-color: rgba(230, 230, 230, .7);
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	transition: .4s opacity;
+	width: 100%;
+
+	.btn {
+		left: 50%;
+		max-width: 80%;
+		position: absolute;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+}
+
+.price {
+	color: $primary;
+	font-family: $font-family-2;
+	text-decoration: none;
+
+	del {
+		color: $text-color;
+	}
+
+	ins {
+		text-decoration: none;
+	}
+}
+
+.before-loop {
+	@include clearfix;
+	margin-bottom: 20px;
+
+	.result-count {
+		color: #a3a3a3;
+	}
+
+	@media(min-width: $screen-sm) {
+		.result-count {
+			float: left;
+		}
+
+		.ordering {
+			float: right;
+			margin-top: -10px;
+		}
+	}
+}
+
+body.single-product {
+	.product:not('.related') .product-title {
+	font-size: 36px;
+	margin-bottom: 50px;
+	width: 100%;
+	display: block;
+	}
+	.product-image {
+		position: relative;
+		top: 8px;
+	}
+}
+
+
+.product-top-meta {
+	width: 100%;
+	clear: both;
+	border-bottom: 1px solid $border-color;
+	font-family: $font-family-2;	
+	padding-bottom: 35px;
+	margin-bottom: 25px;
+	.price {
+		float: left;
+		color: #000;
+		font-size: 40px;
+		line-height: 34px;
+		display: block;
+		height: auto;
+		padding-top: 2px;
+
+	}
+	.review-link{
+		text-transform: uppercase;
+		font-size: 12px;
+		margin-left: 15px;
+		margin-top: -2px;
+		display: inline-block;	
+		min-width: 51%	
+	}
+	.star-rating {
+		margin-left: 15px;	
+		font-size: 12px;
+		display: inline-block;
+		min-width: 51%
+
+	}
+}
+
+.product-description {
+		border-bottom: 1px solid $border-color;
+		padding-bottom: 15px;
+		margin-bottom: 20px;
+}
+
+
+.product-meta {
+	font-size: 14px;
+	strong {
+		color: #292929;
+		font-weight: normal; 
+	}
+	.posted-in {
+		margin-bottom: 15px;
+		 a {
+			color: $text-color;
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+	.sku-wrapper {
+		margin-bottom: 20px;
+	}
+}
+
+.orderform {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-left: 100px;
+	position: relative;
+	
+	.minus, .plus {
+		background: none;
+		border: 1px solid $border-color;
+		border-style: none none none solid;
+		height: 50%;
+		position: absolute;
+		right: 1px;
+		transition: .2s background-color;
+		width: 25px;
+
+		&:hover,
+		&:focus {
+			color: $heading-color;
+		}
+	}
+
+	.btn.btn-md {
+		@media(min-width: $screen-md) {
+			width: 100%;
+		}
+	}
+
+	.plus {
+		top: 0;
+		border-bottom-style: solid;
+	}
+
+	.minus {
+		bottom: 0;
+	}
+
+	.quantity-field {
+		height: 40px;
+		border-radius: 4px;
+		border: 1px solid $border-color;
+		width: 84px;
+		display: inline-block;
+		padding-right: 25px;
+		text-align: center;
+	}
+	.quantity {
+		overflow: hidden;
+	    left: 0;
+	    position: absolute;
+	    top: 0;
+	    width: 84px;
+	}
+
+	.quantity-field {
+		font-family: $font-family-2;
+	    -moz-appearance:textfield;
+	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	}
+}

@@ -1,0 +1,27 @@
+/***
+ * Working Hours
+ */
+
+.working-hours {
+	border-collapse: separate;
+	border-spacing: 0 6px;
+	width: 100%;
+
+	td, th {
+		border: 1px solid #343434;
+		padding: 7px 12px;
+		vertical-align: middle;
+	}
+
+	th {
+		border-right-style: none;
+		border-radius: 3px 0 0 3px;
+		font-weight: 400;
+	}
+	td {
+		border-left-style: none;
+		border-radius: 0 3px 3px 0;
+		text-align: right;
+		white-space: nowrap;
+	}
+}

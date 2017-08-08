@@ -1,0 +1,26 @@
+/***
+ * Jumbotron
+ */
+
+.jumbotron {
+	background-size: cover;
+	color: #5a5a5a;
+	line-height: 1.5em;
+	font-size: $font-size-heading;
+	padding-bottom: 33px;
+	padding-top: 33px;
+
+	@media(min-width: $screen-sm) {
+		padding-bottom: 63x;
+		padding-top: 63px;	
+	}
+
+	@media(min-width: $screen-md) {
+		padding-bottom: 133px;
+		padding-top: 133px;	
+	}
+
+	* + .btn {
+		margin-top: 20px;
+	}
+}

@@ -1,0 +1,184 @@
+/***
+ * Post
+ */
+
+$padding: 30px;
+$padding-mobile: 20px;
+
+.post {
+	margin: 0;
+
+	&:not(.post-single), &.post-single header {
+		@include shadow;
+	}
+
+	+ .post { margin-top: 60px; }
+
+	&:not(.post-single) .post-content {
+		padding: 0 $padding-mobile;
+
+		@media(min-width: $screen-sm) {
+			padding: 0 $padding;
+		}
+	}
+	
+	.post-desc {
+		padding-bottom: 15px;
+	}
+
+	.btn {
+		position: relative;
+		bottom: -7px;
+	}
+
+	.recent-news & {
+		margin: 15px 1px;
+	}
+
+	+ .title {
+		margin-top: 60px;
+
+		@media(min-width: $screen-sm) {
+			margin-top: 80px;
+		}
+	}
+}
+
+.post-title {
+	font-size: 22px;
+	padding-left: $padding-mobile;
+	padding-right: $padding-mobile;
+
+	@media(min-width: $screen-sm) {
+		padding-left: $padding;
+		padding-right: $padding;
+	}
+
+	.recent-news & {
+		font-size: 16px;
+	}
+}
+
+.post-meta {
+	border: 1px solid $border-color;
+	border-style: solid none;
+	margin: 15px 0;
+	padding: 5px $padding-mobile;
+	text-transform: uppercase;
+
+	@media(min-width: $screen-sm) {
+		padding: 5px $padding;
+	}
+
+	li {
+		list-style: none;
+		display: inline-block;
+		margin-right: 20px;
+		font-size: 11px;
+		white-space: nowrap;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		a {
+			color: $text-color;
+
+			&:hover,
+			&:focus {
+				color: $hover;
+			}
+		}
+	}
+
+	i {
+		color: $primary;
+		font-size: 12px;
+		margin-right: 6px;
+	}
+}
+
+/** Post Single */
+
+.post.post-single {
+	header {
+		margin-bottom: 30px;
+	}
+	
+	.post-meta {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+}
+
+/* Post Author */
+
+
+.post-author {
+	@include shadow;
+	display: block;
+	padding: 15px 15px 15px 127px;
+	vertical-align: middle;
+	position: relative;
+	min-height: 101px;
+
+	img {
+		left: 0;
+		position: absolute;
+		top: 0;
+	}
+}
+
+.post-author-title {
+	display: block;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+
+	strong {
+		color: $heading-color;
+		font-weight: normal;
+	}
+}
+
+.post-author-desc {
+	margin-bottom: 0;
+}
+
+.post-info {
+	border-collapse: separate;
+	border-spacing: 0 10px;
+	margin-top: 22px;
+	width: 100%;
+
+	+ .post-author {
+		margin-top: 22px;
+	}
+
+	td, th {
+		background-color: #f7f7f7;
+		padding: 16px 12px;
+	}
+
+	th {
+		border-right: 1px solid $border-color;
+		color: $heading-color;
+		font-weight: normal;
+		text-align: center;
+	}
+
+	td {
+		color: #a8a8a8;
+		font-style: italic;
+		padding-left: 21px;
+		padding-right: 21px;
+
+		a {
+			color: inherit;
+
+			&:hover,
+			&:focus {
+				color: $primary;
+			}
+		}
+	}
+}

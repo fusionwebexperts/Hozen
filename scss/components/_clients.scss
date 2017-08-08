@@ -1,0 +1,80 @@
+/***
+ * Clients
+ */
+
+ .clients {
+ 	box-shadow: 0 0 1px 0 rgba(0, 0, 0, .14);
+ 	border: 1px solid $border-color;
+ 	border-left: none;
+ 	border-bottom: none;
+ 	overflow: hidden;
+	padding: 0;
+	position: relative;
+ }
+
+.client {
+	border: 1px solid $border-color;
+	border-right: none;
+	border-top: none;
+	list-style: none;
+	float: left;
+	position: relative;
+	text-align: center;
+	width: 100%;
+
+	span, a {
+		display: block;
+		padding: 20px;		
+	}
+
+	a {
+		&:hover,
+		&:focus {
+			opacity: .7;
+		}
+	}
+	
+	@media(min-width: 350px) {
+		width: 50%;
+	}
+
+	@media(min-width: $screen-sm) {
+		width: 33.333333333%;
+	}
+}
+
+.client:nth-of-type(1):after,
+.client:before {
+	background-color: $border-color;
+	content: "";
+	position: absolute;
+}
+
+.client:nth-of-type(1) {
+	position: static;
+
+	&:after {
+		bottom: 0;
+		left: 0;
+		height: 1px;
+		width: 100%;
+	}
+}
+
+.client:before {
+	height: 500%;
+	top: 0;
+	left: -1px;
+	width: 1px;
+}
+
+@media(min-width: $screen-sm) {
+	.clients-col-1 .client { width: 100%; }
+	.clients-col-2 .client { width: 50%; }
+	.clients-col-3 .client { width: 33.333333333%; }
+	.clients-col-4 .client { width: 25%; }
+	.clients-col-5 .client { width: 20%; }
+	.clients-col-6 .client { width: 16.666666666%; }
+	.clients-col-7 .client { width: 14.285714285%; }
+	.clients-col-8 .client { width: 12.5%; }
+}

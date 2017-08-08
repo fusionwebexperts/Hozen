@@ -1,0 +1,25 @@
+/***
+ * List
+ */
+
+.list {
+	list-style: none;
+	margin: 20px 0;
+	padding: 0;
+
+	li {
+		+ li {
+			margin-top: 11px;
+		}
+
+		&:before {
+			color: $primary;
+			font-family: "FontAwesome";
+			margin-right: 14px;
+		}
+	}
+}
+
+.list-check {
+	li:before { content: "\f00c"; }
+}

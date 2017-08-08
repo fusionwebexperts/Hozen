@@ -1,0 +1,339 @@
+/***
+ * Tabs
+ */
+
+.tabs {
+	+ .tabs {
+		margin-top: 40px;
+	}
+}
+
+.nav-tabs-wrap {
+	margin: 0 -2px;
+	padding: 0 2px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.nav-tabs {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+	li {
+		&.active {
+			a {
+				background-color: #fff;
+				border-bottom-style: none;
+				color: #000;
+				padding-top: 16px;
+				z-index: 2;
+
+				@media(min-width: $screen-sm) {
+					padding-top: 12px;
+				}
+
+				&:after {
+					background-color: #fff;
+					content: "";
+					position: absolute;
+				}
+			}
+		}
+
+		&:first-of-type a {
+			border-left-style: solid;
+		}
+	}
+
+	a {
+		background-color: #f8f9f9;
+		color: #9a9a9a;
+		display: block;
+		font-family: $font-family-2;
+		font-size: 12px;
+		padding: 13px 20px;
+		text-transform: uppercase;
+		position: relative;
+		white-space: nowrap;
+
+		&:hover,
+		&:focus {
+			color: $primary;
+		}
+
+		@media(min-width: $screen-sm) {
+			padding: 9px 20px;
+		}
+	}
+}
+
+.tab-content {
+	@include shadow;
+	margin-top: -1px;
+	padding: 20px 20px;
+	position: relative;
+	z-index: 1;
+}
+
+.tab-pane {
+	display: none;
+	padding-top: 10px;
+
+	*:first-of-type {
+		margin-top: 0;
+	}
+
+	&.active {
+		display: block;
+	}
+}
+
+/** Default Tabs  */
+
+.tabs-default,
+.tabs-minimal {
+	.nav-tabs {
+		display: table;
+		padding-right: 2px;
+		width: 100%;
+
+		li {
+			display: table-cell;
+			min-width: 150px;
+			vertical-align: bottom;
+
+			&.active a {
+				&:after {
+					bottom: -1px;
+					height: 1px;
+					left: 0;
+					width: 100%;
+				}
+			}
+
+			@media(min-width: $screen-sm) {
+				min-width: auto;
+			}
+		}
+
+		a {
+			@include shadow;
+			border-left-style: none;
+			border-bottom-style: none;
+			text-align: center;
+		}
+	}
+}
+
+/** Minimal Tabs  */
+
+.tabs-minimal {
+	.nav-tabs li {
+		vertical-align: middle;
+	}
+
+	.nav-tabs li.active a,
+	.nav-tabs a {
+		border-bottom-style: solid;
+	}
+
+	.nav-tabs li.active a {
+		padding-bottom: 10px;
+	}
+
+	.nav-tabs a {
+		&:after { display: none; }
+	}
+
+	.nav-tabs-wrap {
+		padding-bottom: 2px;
+	}
+
+	.tab-content {
+		border: none;
+		box-shadow: none;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+/** Minimal Tabs Small  */
+
+.tabs-minimal-small {
+	.nav-tabs {
+		display: inline-block;
+
+		a {
+			padding-left: 42px;
+			padding-right: 42px;
+		}
+	}
+}
+
+/** Side Tabs  */
+
+$tabs-size: 177px;
+
+@media(min-width: $screen-md) {
+	.tabs-side {
+		position: relative;
+
+		.nav-tabs {
+			position: absolute;
+			top: -1px;
+			width: $tabs-size;
+
+			li {
+				&.active a,
+				&:last-of-type a {
+					border-bottom-style: solid;
+				}
+
+				&.active a {
+					@include shadow;
+					z-index: 2;
+
+					&:after {
+						bottom: 0;
+						height: 100%;
+						width: 2px;
+					}
+				}
+			}
+
+			a {
+				border: 1px solid $border-color;
+				border-bottom-style: none;
+				position: relative;
+			}
+
+			i {
+				margin-right: 3px;
+			}
+		}
+	}
+}
+
+/* Side Tabs Left  */
+
+@media(min-width: $screen-md) {
+	.tabs-side-left {
+		.nav-tabs {
+			left: 0;
+			padding-left: 2px;
+
+			li {
+				&.active a {
+					margin-left: -2px;
+
+					&:after {
+						right: -2px;
+					}
+				}
+			}
+
+			a {
+				border-right-style: none;
+			}
+		}
+
+		.tab-content {
+			margin-left: $tabs-size;
+		}
+	}
+}
+
+/* Side Tabs Right  */
+
+@media(min-width: $screen-md) {
+	.tabs-side-right {
+		.nav-tabs {
+			right: 0;
+			padding-right: 2px;
+
+			li {
+				&.active a {
+					margin-right: -2px;
+
+					&:after {
+						left: -2px;
+					}
+				}
+			}
+
+			a {
+				border-left-style: none;
+			}
+		}
+
+		.tab-content {
+			margin-right: $tabs-size;
+		}
+	}
+}
+
+/** Small tabs */
+
+@media(min-width: $screen-md) {
+	.tabs-small.tabs-default {
+		margin-top: 50px;
+
+		.nav-tabs, .nav-tabs li {
+			display: block
+		}
+
+		.nav-tabs li {
+			float: left;
+
+			&:not(.active) {
+				position: relative;
+				top: 5px;
+			}
+
+			&.active a {
+				min-width: 180px;
+			}
+
+			a {
+				min-width: 140px;
+			}
+		}
+	}
+}
+
+/** Responsive */
+
+@media(max-width: $screen-md - 1px) {
+	.nav-tabs {
+		display: table;
+		padding-right: 2px;
+		width: 100%;
+
+		li {
+			display: table-cell;
+			min-width: 150px;
+			vertical-align: bottom;
+
+			&.active a {
+				&:after {
+					bottom: -1px;
+					height: 1px;
+					left: 0;
+					width: 100%;
+				}
+			}
+
+			@media(min-width: $screen-sm) {
+				min-width: auto;
+			}
+		}
+
+		a {
+			@include shadow;
+			border-left-style: none;
+			border-bottom-style: none;
+			text-align: center;
+		}
+	}
+}

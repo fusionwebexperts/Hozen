@@ -1,0 +1,59 @@
+/***
+ * Info Table
+ */
+
+.info-table-icon {
+	color: $primary;
+	font-size: 18px;
+}
+
+.info-table-content {
+	color: $heading-color;
+
+	strong {
+		color: #898989;
+		font-weight: normal;
+	}
+}
+
+.info-table-row:first-of-type > *:after { display: none; }
+
+.info-table {
+	line-height: 1.95em;
+	@include shadow;
+	width: 100%;
+
+	td, th {
+		border-bottom: 1px solid $border-color;
+		padding: 16px 23px;
+		position: relative;
+		vertical-align: middle;
+
+		&:after {
+			background-color: #fff;
+			content: "";
+			height: 1px;
+			position: absolute;
+			top: -1px;
+			width: 2px;
+		}
+	}
+
+	th {
+		border-right: 1px solid $border-color;
+		font-weight: 400;
+		text-align: center;
+		width: 63px;
+
+		&:after {
+			right: 0;
+		}
+	}
+	td {
+		border-left-style: none;
+
+		&:after {
+			left: 0;
+		}
+	}
+}

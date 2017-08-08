@@ -1,0 +1,76 @@
+/***
+ * Star rating
+ */
+
+.star-rating {
+	color: $primary;
+	line-height: 18px;
+	overflow: hidden;
+	position: relative;
+	font-family: 'FontAwesome';
+	font-size: 13px;
+	
+	&:before { content: "\f006\f006\f006\f006\f006"; }
+
+	span {
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		position: absolute;
+		padding-top: 2em;
+
+		&:before {
+			content: "\f005\f005\f005\f005\f005";
+			top: 0;
+			position: absolute;
+			left: 0;
+		}
+	}
+
+	/** Inside Product */
+
+	.product & {
+		float: right;
+		top: 1px;
+	}
+}
+
+/** Stars */
+
+.stars-vote {
+	margin-top: 5px;
+}
+
+.stars {
+	clear: both;
+	color: $primary;
+	display: inline-block;
+	height: 18px;
+	margin: 0 0 0 10px;
+	overflow: hidden;
+	position: relative;
+	font-family: 'FontAwesome';
+	font-size: 18px;
+	top: 2px;
+
+	&:hover a:before {
+		content: "\f005";
+	}
+
+	&:hover a:hover ~ a:before {
+		content: "\f006";
+	}
+
+	a {
+		float: left;
+		opacity: 1;
+
+		&:hover, &:focus {
+			color: $primary;
+		}
+
+		&:before {
+			content: "\f006";
+		}
+	}
+}

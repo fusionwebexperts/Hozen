@@ -1,0 +1,98 @@
+/***
+ * Gallery FS
+ */
+
+.gallery-fs {
+	@include shadow;
+	overflow: hidden;
+
+	figure {
+		position: relative;
+		img {
+			width: 100%;
+		}
+	}
+
+	.owl-item {
+		img {
+			border-radius: 3px;
+		}
+
+		a {
+			display: block;
+			margin: 0 2px;
+			position: relative;
+
+			&:after {
+				border: 3px solid transparent;
+				border-radius: 3px;
+				content: "";
+				display: block;
+				left: 0;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				transition: .3s border-color;
+				width: 100%;
+			}
+		
+			&:hover:after,
+			&:focus:after,
+			&.selected:after {
+				border-color: $primary;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.owl-nav > *,
+	.gallery-fs-fullscreen {
+		color: #ccc;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 18px;
+		height: 37px;
+		border-radius: 3px;
+		border: 1px solid;
+		position: relative;
+		width: 37px;
+
+		+ * {
+			margin-left: 6px;
+		}
+
+		i {
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+	}
+
+	.owl-nav {
+		position: absolute;
+		right: 21px;
+		top: -49px;
+	}
+
+	figcaption {
+		min-height: 57px;
+		padding: 19px 150px 19px 21px;
+	}
+
+	.gallery-fs-nav {
+		position: relative;
+	}
+
+	.gallery-fs-fullscreen {
+		background: none;
+		position: absolute;
+		right: 106px;
+		bottom: 12px;
+	}
+}
+
+.gallery-fs-thumbnails {
+	border-top: 1px solid $border-color;
+	padding: 18px 21px;
+}
